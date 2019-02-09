@@ -10,7 +10,6 @@ function createGallery(){
 		parentElement.appendChild(photoDiv)
 	}
 }
-
 function galleryImageClicked(el){
 	var imgSrc = el.getAttribute('src');
 	var popovermodal = document.getElementById('popover_modal');
@@ -23,4 +22,17 @@ function galleryImageClicked(el){
 function close_modal() {
 	var popovermodal = document.getElementById('popover_modal')
 	$('#popover_modal').fadeOut()
+}
+
+
+function createAwards(){
+	var parentElement = document.getElementById('awards_content')
+	for (var i=1; i<=12; i++) {
+		var photoDiv = document.createElement('div')
+		photoDiv.className = "gallery_image_div"
+		var imgHTML = '<img class= "gallery-img" src="awards/a'+i+'.jpg" onclick="galleryImageClicked(this)">';
+		photoDiv.innerHTML = imgHTML;
+
+		parentElement.appendChild(photoDiv)
+	}
 }
