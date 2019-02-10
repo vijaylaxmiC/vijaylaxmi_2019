@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Bootstrap Example</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+.main_div
+{  
+    background-color:white;
+    margin-right:20px;
+    margin-left:5px;
+    border-radius:4px;
+	height:auto;
+	min-height:500px;
+	width:900px;
+}
+ 
+ .nav_changes 
+{
+	    height:70%;
+		width:66%;
+		margin-top:30px;
+		margin-left:240px;
+}
+
+  .submenu ul li a
+{
+    color: #ffffff;
+}
+
+.bodycolor 
+{
+	background-color:black;
+}
+ 
+ #question
+{
+	font-size:23px;
+	font-weight:bold;
+	font-family:Roboto;
+	margin-top:40px;
+	margin-left:15px;
+}
+
+ #answer
+{
+	font-size:18px;
+	font-family:Roboto;
+	margin-top:20px;
+	margin-left:50px;
+	
+	
+}
+	.center 
+{
+  display: block;
+  margin-left:30%;
+  margin-right:auto;
+  height:30%;
+  width:29%;
+
+}
+
+
+ *{
+  box-sizing: border-box;
+}
+
+.column1 
+{
+	float:left;
+	margin-left:15%;
+    width: 29%;
+    height:30%;
+    padding: 5px;
+ 
+}
+
+.row::after 
+{
+  clear: both;
+  display: table;
+}
+
+.column2
+{
+	
+	width:29%;
+	height:30%;
+	margin-left:8%;
+}
+
+
+</style>	
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.css"></script>
+
+</head>
+
+<body>
+
+<body class="bodycolor">
+
+<nav class="navbar navbar-expand-sm nav_changes submenu">
+  
+  <a class="navbar-chess_era" href="#">
+    <img src="chess_era.PNG" alt="chess_era" style="width:60px";>
+  </a>
+  
+  <ul class="nav navbar-nav pull-right text-white">
+    
+	<li class="nav-item">
+      <a class="nav-support forums" href="#"> support forums </a>
+    </li>
+	
+    <li class="nav-item">
+      <a class="nav-contact" href="#"> contact </a>
+    </li>
+	
+    <li class="nav-item">
+      <a class="nav-login" href="#"> login </a>
+    </li>
+	
+	<li class="nav-item">
+      <a class="nav-english" href="#"> english</a>
+    </li>
+ 
+ </ul>
+</nav>
+
+<div class="container-fluid size main_div">		
+	
+	<div id="question">
+    </div>
+
+    <div id="answer">
+    </div>
+
+</div>
+
+	<div class="row">
+	</div>
+	
+	<div class="column1">
+	</div>
+	
+	<div class="column2">
+	</div>
+	
+
+<script>
+
+var object = [
+	{
+		"q":"What is Chess Era?",
+		"a":"Chess era is a website dedicated to chess.It is place to prove yourself, share your" +
+			 "thoughts,improve your chess game & enjoy all the aspects of chess."
+	},
+	
+	{
+		"q":"Who runs Chess Era?",
+		"a":"Chess Era is powered by chess players.We want you to feel like you own part of Chess Era and help to run it as well."+
+			"But who owns the website? Chess players and programmers who love the game thought of creating Chess.com in order to serve the chess community."+
+			"Chess Era team pic."
+	},
+	
+	{
+		"q":"How do I subscribe Chess Era?",  	
+		"a":"If you love chess,you'll love Chess Era-a site built BY and FOR chess enthusiasts of all levels.The basic membership is completely free."+
+		"You can play all the correspondence-style and real-time chess including blitz and bullet game."
+	},
+	
+	{
+		"q":"What are the site policies?",
+		"a":"<b>Keep it Simple: Be fair, no cheating!</b> Chess Era is a friendly community for those who love chess!"+
+			"Please be on your best behaviour as you play chess and interact with others.Failing to follow these rules will result in your account being closed."+
+			"<p><b>Interacting with members</b> Chess Era is a safe place for people to come and enjoy."+ 
+			"Abusive language, personal attacks, threats, or any other kind of attacking behaviour is not appreciated.</p>"+
+			"<p><b>Keep It Clean</b>You should not post any offensive content on Chess.com including your username, avatar"+
+			"or personal description. You should not add any offensive comments, chat or other content. Cheating, using offensive/vulgar"+ 
+			"language, using toilet humor, making personal attacks, spamming or advertising competitive websites, religious "+
+			"or political debate, intentional pointless/distracting post and discussion of illegal activities"+
+			"(drugs, etc).will lead to barring or removal of your account.</p>"	+
+			"<p><b>No Cheating or Computer Help</b>You should not use chess programs (Chessmaster, Fritz, etc)"+
+			"to analyse current ongoing games unless specifically permitted(such as a computer tournament, etc)."+
+			"The only type of computer assistance allowed is games database for opening lines in Turn-based Chess and Vote"+ 
+			"Chess. You cannot receive any outside assistance in Live Chess games.</p>"+
+			"<p><b>Only One Account:</b>Each member can have only ONE Chess.com account."+
+			"If members create more than one account, then all the accounts will be closed."
+	},
+	
+	{
+			"q":"What is the meaning of Knight C3 and similar terms?",
+			"a":"To know the language of chess we need to understand the chess notation. Click the following link for chess notation."+
+			"<p><b><a href=https://en.wikipedia.org/wiki/Chess#Movement.> Wikipedia</a></b></p>"
+	},
+	
+	{
+		"q":"What are the rules to be followed while playing chess?",
+		"a":"<p><b>Setup:</b>The board is setup as shown. The board should have a white square at the closest right-hand side"+
+			"for both the players.Remember that the queen must be on a square that matches her colour.</p>"+
+			"<p><b>Turns:</b>White always moves first and players alternate their turns. Players can only move one piece at a time, except when castling </p>"+
+			"<p><b>Taking Pieces:</b>Players take pieces when they encounter an opponent in their movement path. Only pawns take differently"+
+			"than they move Players cannot take or move through their own pieces.</p>"+
+			"<p><b>Pawn movement:</b>Pawns only move forward. On the first move a pawn can move one or two spaces; every subsequent move "+
+			"can only be one space. Pawns move diagonally to take opponents.</p>"+
+			"<p><b>Pawn Promotion:</b>If a pawn reaches the opposite side of the board,it is promoted to a higher piece (except king)."+
+			"There is no limit on the number of pawns that can be promoted.</p>"+
+			"<p><b>Rook:</b>Rooks move in a continuous straight line forward, backward and side-to-side.</p>"+
+			"<p><b>Knight:</b>Knights are the only pieces that jump off the board. Unlike other pieces they are not blocked"+
+			"if there are pieces between them and their destination square.To make it easier to remember as to how a knight"+
+			"moves think of the alphabet ‘L’. Two spaces in a direction forward, backward or side-to-side, and one space at a right turn.</p>"+
+			"<p><b>Bishop:</b> Bishops move in continuous diagonal lines in any direction.</p>"+
+			"<p><b>Queen:</b> The queen moves in continuous diagonal and straight linesforward, backward and side-to-side.</p>"+
+			"<p><b>King:</b>The king can move in any direction, one square at a time. A king cannot move to a square that is under attack by the opponent.</p>"+
+			"<p><b>Castling:</b> Castling is the only move that allows two pieces to move during the same turn. During castling a king moves two spaces towards the rook "+
+			"that it will castle with, and the rook jumps to the other side. The king can castle to either side as long as:"+
+			"<p>1.The king has not moved.</p> <p>2.The king is not in check.</p> <p>3.The king is not in check.</p>"+
+			"<p>4.There are no pieces between the king and castling-side rook.</p> <p>5.The castling-side rook has not moved."+
+			"<p>It does not matter:</p><p>1.If the king was in check, but is no longer.</p><p>2.If the rook can be attacked by an opponent's piece before castling.</p>"+
+			"<p><b>En Passant:</b> En passant is a special movement for pawns attacking pawns. It only applies if your opponent moves a pawn two spaces and its destination space is next to your pawn.</p>"+
+			"<p><b>Check:</b>A king is in check when an opponent's piece is in a position that can attack the king. A player must move their king out of check, block the check or capture the attacking piece.</p>"+
+			"<p><b>Check mate:</b>Putting an opponent's king in checkmate is the only way to win the game. A king is in checkmate if it is "+
+			"in check. The opponent's piece that has the king in check cannot be captured, the check cannot be blocked and the king cannot"+
+			"move to a square that is not under attack.In the illustration the white queen has the black king in check"+
+			"and all of the spaces where the king can move can be attacked by the queen. The king cannot take the queen, because"+
+			"the knight is protecting the queen. The black bishop cannot block the queen. This is checkmate."+
+			"<p><b>Stalemate:</b> Stalemate is a tie. It is achieved if there are no legal moves for a player to make. In this illustration"+
+			"it is white's turn. All spaces around the king are being attacked, but the king is not in check, therefore it cannot move. The only other white piece, the pawn, is blocked by the king. Because movement is impossible, the game is a stalemate."+
+			"If white had another piece somewhere on the board that was not blocked, it would have to move and the game would continue.</p>"+
+			"<p><b>Basic Strategy:</b> Chess is an incredibly complex strategic game and it is impossible to get into all the possible tactics that could be used  to win. However, I wanted to leave the new player with a few hints that will hopefully aid in victory."+
+			"<p><b>Piece Value:</b>It is quite obvious that you would want to protect your pieces from capture. ITo avoid the capture you should know which pieces are the strongest. This help you in a situation where you need to choose between two pieces. A good explanation of piece value is available on Wikipedia."+
+			"<p>Queen: Strongest = High Value</p><p></p>Rook <p>Bishop, Knight</p> <p>Pawn: Weakest = Least Value</p>"+
+			"The bishop and the knight are commonly considered equal on the value scale, However many feel (including me) that the bishop has a slight edge over the knight."+
+			"Pawns are valued more as they near promotion.<p><b>Pawn Promotion:</b> A pawn can be promoted to a variety of pieces, but the strongest choice is always to promote to queen which has an added advantage."+
+			"Board Control: When building defence, remember to look at the board and analyse your strength in certain areas of the board. Try and keep the power distributed fairly and evenly. Try and bring pieces over to add strength if you forsee an attack.</p>"+
+			"When you plan an attack, it's a bad idea to let any of your pieces being cut off from your main force. I find it helpful to have a support piece in mind when planning an attack."+ 
+			"Using pieces in tandem almost always yields a better result when compared to using one piece alone."
+		},
+	
+	{
+		"q":"How do I claim a draw?",
+		"a":"<p><b>Offer Draw Image.</b> In Live Chess, the 'Draw' button is generally used to offer your opponent a draw, which may"+
+			"be accepted or declined. However, in the instance of a Three-fold Repetition, you can use the 'Draw' button to claim a draw,"+
+			"without your opponent having an option to decline.Once the position is repeated three times, make your move and"+
+			"click on the 'Draw' button.This will end the game as a draw.In an online or turn-based chess, once the position is repeated three times, "+
+			"make your move. Now, on the screen for this game, just below the notations box you will find a text which reads 'claim game'."+
+			"Click on the link Claim Game  to claim the draw. This method also works for the 50-move rule,which states that the game"+
+			"may be drawn if 50 moves (2 ply) are played with no captures and no pawn moves.Finally, note that in cases where the opponent has insufficient material"+
+			"to mate (lone King, King + Knight, King + Bishop, King + 2 Knights) a draw will be automatically declared on time-out.</p>"
+	},
+	
+	{
+		"q":"How to I resign?",
+		"a":"The proper moment to resign in chess is when you are losing too much material or the upcoming checkmate is inevitable."+
+			"If you are playing against a strong player, it's a good decision to resign."+
+			"If you are playing against a weak player, you can continue and test your opponent skills."
+	},
+
+	{
+		"q":"Why can't I play in every game?",
+		"a":"While most games are open to everyone, some games are only open to Premium Chess.Era Members."
+	},
+	
+	{
+		"q":"How do I end my premium membership subscription?",
+		"a":"One cannot end after subscription."
+	},
+	
+	{
+		"q":"what is the difference between Bronze, Silver and Gold membership?",
+		"a":"<img src='gold_silver_platinum.png' alt=gold_silver_platinum  margin-left:20%;"+
+				"margin-top:75%; width:80%; height:30%;>"
+	},
+	
+	{
+		"q":"Can I pay for my membership through Paytm, Online Banking or Google Play?",
+		"a":"YES."
+	},
+	
+	{
+		"q":"Can I order membership for a friend?",
+		"a":"YES."
+	},
+	
+	{
+		"q":"Can I pay for my membership by Cheque or Money Order?",
+		"a":"YES."
+	},
+	
+	{
+		"q":"What is chess 960?",
+		"a":"Chess 960 is also called as Fischer Random and is just like regular chess... except that the starting position is shuffled to "+
+		"include 960 different possible positions.So you can throw out your opening book - but keep your opening principles!"+
+		"You play the same, but you just have different placement of pieces on the back rank.At first, the act of castling might seem strange, but the result is the same as"+
+		"ever.The king/rook end up in the same position as when they castle in regular chess; king on g-file and rook on f-file for kingside; "+
+		"king on c-file and rook on d-file for queenside.The 960 refers to the number of legal starting positions for this variant,"+
+		"where there is a rook on each side of the king and the bishops are each on a different-coloured square."
+	},
+
+	{
+		"q":"How do I create a chess 960 game?",
+		"a":"<p>*    Click on war zone button.</p><p> *   Click on create war button.</p>"+
+		"<p>*    Select game type option</p> <p>*   Scroll the button and select the chess 960 option.</p>"+
+		"<p><img src=chess960.png alt=my image  class=center></p>"
+	},
+	
+	{
+		"q":"How do I castle in a chess 960 game?",
+		"a":"The most important thing to remember about castling in a 960 game is that the King and Rook end up on exactly the same squares"+
+		"as they would in a standard game:"+
+		"<p>*  Castling king-side (0-0) results in the King on the g-file and the Rook on the f-file;</p>"+
+		"<p>*  Likewise, castling queen-side (0-0-0) leaves the King on the c-file and the Rook on the d-file.As always, the King and relevant Rook must not have any pieces between "+
+		"them; the King cannot move out of or through check; and the two pieces cannot be moved prior to castling. Same as always!"+
+		"If you're facing technical difficulties trying to castle (especially when there is only one square between the King and Rook),"+
+		"click first on the King, followed by the Rook.</p>"
+	},
+
+	{
+		"q":"I forgot my password. Can you help me remember?",
+		"a":"<p>If you can remember the email address you used when you registered you're in luck!Just click here to enter your email address again, and we'll send you a reminder!</p>"+
+		"<p><img src=account.png alt=my image  class=column1></p> "+
+		"<p><img src=account1.png alt=my image class=column2></p>"
+	},
+
+	{
+		"q":"Can I share computers with another member?",
+		"a":"<p>You cannot. There are 2 simple rules</p>"+
+		"<p>1.	Each person playing here Must have and use their own account (no account sharing)</p>"+
+		"<p>2.  All games played between people logging in from the same computer Must be unrated games</p>"
+	},
+
+	{
+		"q":"How do I Close or Delete my account?",
+		"a":"<p>First, we appreciate your enthusiasm!Unless something VERY strange has happened, we have already sent an activation"+
+		"link to the email address you submitted during registration.If you have not yet received it, please follow these steps:</p>"+
+		"<p>1.Wait 20 Minutes- Email can take a while to move through cyberspace. Please wait up to 20 minutes to see if you have received the email.</p>"+
+		"<p>2.Check your spam or Junk Mail folder- Sometimes legitimate email ends up in spam folders. Please check for an email in these folders."+
+		"The subject line will be Chess.com - Activate Your Account</p>"
+	},
+
+	{
+		"q":"I just registered to an academy. Where is my activation email?",
+		"a":"Double-check the address entered-Look at the email address on the page after registration and make sure it is correct. If you made a mistake you"+
+		"can click on the link on that page to change your registration email.If that doesn't work, you can try registering again."+
+		"If you have already tried all the above suggestions and still did not receive your activation link, please drop message at support@Chessera.com"+
+		"and include your username. We will send your activation link to you directly.</p>"
+	},
+
+	{
+		"q":"How can I change my password?",
+		"a":"<p>Click on Forgot password option.</p> <p><img src=password.PNG alt=my image class=column1></p>"+
+		"<p><img src=forgot_password.PNG alt=my image class=column2></p>"
+	},
+
+	{
+		"q":"How to register?",
+		"a":"<p>Go to chess era affiliated academies & register yourself by providing your email id.</p>"+
+		"<p><img src=register.PNG alt=my image class=center></p>"
+	},
+	
+	{
+		"q":"How to create a new group?",
+		"a":"<p>Click on chat option in menu and you will get create group option. and only admin can create new group</p>"+
+		"<p><img src=create_group.PNG alt=my image class=column1></p>"+
+		"<p><img src=create_group1.PNG alt=my image class=column2></p>"
+	},
+
+	{
+		"q":"How to see group details?",
+		"a":"<p>Click on group followed by group header and it will open group details.</p>"+
+		"<p><img src=group_details.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How to send a message?",
+		"a":"<p>There are 2 cases.</p>"+
+		"<p>1.<b>  Chatting with a group:</b> Once you open chat you will see all the groups which you are part of it. Select the group of your choice and click on it. "+
+		"A text box like “Enter text” here will be displayed. Enter your message, tap & send.</p>"+
+		"<p><img src=message_group.PNG alt=my image class=center></p>"+
+		"<p>2.<b> Chatting with a single player:</b> Click on group info and you will see all the members in a group. Select the player to whom you want to message. "+
+		"Now. you will get an option namely send message. A text box reading “Enter text” will be displayed.Enter your message, tap & send.</p>"+
+		"<p><img src=message_single.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How to remove a user from a group?",
+		"a":"<p>If i am an admin, then I can click on group info and select a person who is to be deleted from the group</p>"+
+		"<p><img src=remove_group.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How to allocate a group admin?",
+		"a":"<p>If i am admin, then I can click on group info and select a person who have option like Make group admin.</p>"+
+		"<p><img src=group_admin.PNG alt=my image class=column1></p>"+
+		"<p><img src=group_admin1.PNG alt=my image class=column2></p>"
+	},
+	
+	{
+		"q":"How to see a user profile?",
+		"a":"<p>If i am admin, then I can click on group info and select a person you have option like View profile.</p>"+
+		"<p><img src=user_profile.PNG alt=my image class=column1></p>"+
+		"<p><img src=user_profile1.PNG alt=my image class=column2></p>"+
+		"<p><img src=user_profile2.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How to remove a user from an admin role?",
+		"a":"<p>If i am admin, then I can click on group info and select a person you have option like Demote from admin.</p>"+
+		"<p><img src=remove_admin.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How to add participants?",
+		"a":"<p>If i am admin, then I can click on group info and select a person you have option like Add participants.</p>"+
+		"<p><img src=create_group1.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"What is the role of a group admin?",
+		"a":"<p>The group admin can do the following activities</p> <p>1.Add participants</p> <p><img src=create_group1.PNG alt=my image class=center></p>"+
+		"<p>2.Remove players from group</p> <p><img src=remove_group.PNG alt=my image class=center></p>"+
+		"<p>3.Add a group admin</p><p><img src=group_admin.PNG alt=my image class=center></p>"+
+		"<p><img src=group_admin1.PNG alt=my image class=center></p>"+
+		"<p>4.Demote from admin role</p> <p><img src=remove_admin.PNG alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I create a new puzzle?",
+		"a":"<p>Click on puzzle button. You get an option Create puzzle. Click on this to create your own puzzle.</p>"+
+		"<p><img id=myImg src=create_image.PNG alt=my image class=column1></p>"+
+		"<img id=myImg src=create_puzzle.PNG alt=my image class=column2>"
+	},
+	
+	{
+		"q":"How do I post a puzzle?",
+		"a":"<p>Create puzzle & click on add solution. Once you complete adding solution click on post puzzle button.</p>"+
+		"<img src=post_puzzle.PNG alt=my image class=center>"
+	},
+	
+
+	{
+		"q":"How do I solve a puzzle?",
+		"a":"<p>Once you post the puzzle to a group or an individual, the other players will get puzzle request. In puzzle request window the player will click solve option.</p>"+
+		"<img src=solve_puzzle.PNG alt=my image class=center>"
+	},
+	
+
+	{
+		"q":"How do I submit an answer?",
+		"a":"<p>Once the puzzle is solved, click the  submit answer button.</p>"+
+		"<img src=submit.jpg alt=my image class=center>"
+	},
+
+	{
+		"q":"How do I discuss on an answer?",
+		"a":"<p>If you are the puzzle creator, post the puzzle.  Next click on Start Discussion button.</p>"+
+		"<img src=Discussion.jpg alt=my image class=center>"	
+	},
+
+	{
+		"q":"How do I see a puzzle request?",
+		"a":"<p>In puzzle popup window, you have an option named Puzzle Request. By clicking this option you will see requests.</p>"+
+		"<img src=puzzle_request.png alt=my image class=center>"
+	},
+
+	{
+		"q":"How do I end a discussion?",
+		"a":"<P>If you are the puzzle creator, then in the discussion table menu you will have an  option named End Discussion.</P>"+
+		"<img src=End_Discussion.png alt=my image class=center>"
+	},
+
+	{
+		"q":"How do I chat?",
+		"a":"<p>In puzzle discussion table, you have an option of entering text. Type your message here and send.</p>"+
+		"<p>  1.Create puzzle & click on add solution option. Next you will get post puzzle option.</p>"+
+		"<p>  2.If you post the puzzle to a group or an individual, the other player will get puzzle request."+
+		"In puzzle request option the player will solve the puzzle by clicking  solve option.</p>"+
+		"<img src=Discussion.jpg alt=my image class=center>"
+	},
+
+	{
+		"q":"How do I create a war?",
+		"a":"<p>Click on War Zone button and next click the create war button.</p>"+
+		"<p><img src=warzone.png alt=my image class=column1></p>"+
+		"<p><img src=create_war.png alt=my image class=column2></p>"+
+		"<p><img src=create_war1.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I choose my team?",
+		"a":"<p>Next to create war there are two switching options to select namely </p><p>&nbsp;&nbsp;1. Fight individually</p>"+
+		"<p><img src=fight.png alt=my image class=center></p> <p>2.Team.</p> <p><img src=team_opponent.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I choose my opponents?",
+		"a":"<p>To select opponents there are 2 switching choices like</p><p>  1.Single opponent.</p><p><img src=single_opponent.png alt=my image class=center></p>"+
+		"<p>2.Team opponent</p><p><img src=team_opponent.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I see my wars?",
+		"a":"Click on war zone button and within the selected option click on My wars option to see your currently running wars."+
+		"<p><img src=mywars.png alt=my image class=column1></p> <p><img src=mywars1.png alt=my image class=column2></p>"
+	},
+
+	{
+		"q":"How do I see completed wars?",
+		"a":"<p>Click on war zone button and within the selected option click on Completed option to see your completed wars.</p>"+
+		"<p><img src=completed.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I watch wars?",
+		"a":"<p>Click on war zone button and within the selected option click on Watch wars option to see currently running wars.</p>"+
+		"<p><img src=watch_wars.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I select game type?",
+		"a":"<p>In game type there are 2 options.</p>"+
+		"<p>1.Standard</p><p>2.Chess 960</p> By scrolling you can select your option."+
+		"<p><img src=game_type.png alt=my image class=center></p>"
+	},
+	
+	{
+		"q":"What is rated game?",
+		"a":"<p>Based on user rating, his win & loss, the rating will change.There are 5 types to calculate user ratings,</p>"+
+		"<p>1.Blitz</p><p>2.Bullet</p><p>3.Rapid</p><p>4.Daily</p><p>5.Classic.</p>"+
+		"<p><img src=rated_game.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I select my colour?",
+		"a":"Switch OFF Is a rated button and you will choose your own colour here. The available colours are,"+
+		"<p>1.White.</p> <p>2.Black</p> <p>3.Black or white.</p>"+
+		"<p><img src=my_colour.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I join a team?",
+		"a":"<p>If you create a war, then the other team or a single player will get Join option.</p>"+
+		"<p><img src=jointeam.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I chat with opponents?",
+		"a":"<p>Once all the players join the game, in game table menu you can see an option named opponent.Here you will chat with opponents or with your team.</p>"+
+		"<p><img src=chat.png alt=my image class=column1></p>"+
+		"<p><img src=chat1.png alt=my image class=column2></p>"
+	},
+
+	{
+		"q":"How do I select predefined chats?",
+		"a":"<p>In game table menu there is an option named opponents,  Here you will see Predefined chats.</p>"+
+		"<p><img src=predefined.png alt=my image class=center></p>"
+	},
+
+	{
+		"q":"How do I create my own team?",
+		"a":"<p>In the chat window there is an option to create group, Here you create your own team.</p>"+
+		"<p><img src=my_ownteam.png alt=my image class=column1></p>"+
+		"<p><img src=cgroup.png alt=my image class=column2></p>"
+	},
+
+
+]
+window.onload = function() 
+{
+	var hashvalue = window.location.hash
+	var qNum = hashvalue.substring(1,hashvalue.len)
+	document.getElementById("question").innerHTML = object[qNum-1].q
+	document.getElementById("answer").innerHTML = object[qNum-1].a
+	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("http://www.chessera.com:9090/admin-module/sendSupport",
+    {
+  		 name    : $('#name').val(),
+		 email   : $('#email').val(),
+		 phoneno : $('#phoneno').val(),
+		 age     : $('#age').val(),
+		 message : $('#message').val(),
+		 subject : $('#subject').val(),
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+  Name: <input type="text" name="name" id="name"><br>
+  Email: <input type="text" name="email" id="email"><br>
+  Phoneno: <input type="text" name="phoneno" id="phoneno"><br>
+  Age: <input type="text" name="age" id="age"><br>
+  Message: <input type="text" name="message" id="message"><br>
+  Subject: <input type="text" name="subject" id="subject"><br>
+  
+ 
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+</body>
+</html>
+
