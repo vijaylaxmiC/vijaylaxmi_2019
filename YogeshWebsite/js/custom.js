@@ -27,7 +27,7 @@ function close_modal() {
 
 function createAwards(){
 	var parentElement = document.getElementById('awards_content')
-	for (var i=1; i<=12; i++) {
+	for (var i=1; i<=6; i++) {
 		var photoDiv = document.createElement('div')
 		photoDiv.className = "gallery_image_div"
 		var imgHTML = '<img class= "gallery-img" src="awards/a'+i+'.jpg" onclick="galleryImageClicked(this)">';
