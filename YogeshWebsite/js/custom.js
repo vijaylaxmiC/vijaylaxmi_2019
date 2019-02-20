@@ -1,12 +1,12 @@
 var awardsText =  {
-	'awards/a1.jpg':"Sample text for award a1",
-	'awards/a2.jpg':"Sample text for award a2",
-	'awards/a3.jpg':"Sample text for award a3",
-	'awards/a4.jpg':"Sample text for award a4",
-	'awards/a5.jpg':"Sample text for award a5",
-	'awards/a6.jpg':"Sample text for award a6",
-	'awards/a7.jpg':"Sample text for award a7",
-	'awards/a8.jpg':"Sample text for award a8"
+	'awards/a1.jpg':"<h4>A meaningful salutations through dance : Prajavani news paper - Nanjundrao</h4>",
+	'awards/a2.jpg':"",
+	'awards/a3.jpg':"<h4>A show that enhances your love for Indian culture :</h4>",
+	'awards/a4.jpg':"<h4>'Krishnapremi' - a dance fest which opened the doors of experimentations :</h4>",
+	'awards/a5.jpg':"",
+	'awards/a6.jpg':"",
+	'awards/a7.jpg':"<h4>Set the stage on fire through his dynamic bharatanatyam for the theme 'Agni' - Subbu Kriahna</h4>",	
+	'awards/a8.jpg':"",
 }
 
 function createGallery(){
