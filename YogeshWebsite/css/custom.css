@@ -30,6 +30,12 @@ iframe {
   .gallery_image_div {
     	width:100% !important;
    }
+
+  #popover_heading {
+    font-size: 14px !important;
+    width: 92% !important;
+  }
+
 }
 
 
@@ -57,6 +63,13 @@ iframe {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+#popover_heading {
+  float: left;
+  font-size: 28px;
+  width: 95%;
+  color: darkcyan;
+}
+
 /* Modal Content */
 #popover_modal_content {
   background-color: #fff;
@@ -76,6 +89,7 @@ iframe {
 }
 #popover_image_container {
 	text-align: center;
+  margin-top: 60px;
 }
 #popover_image_container > img {
 	width: 100%;
