@@ -65,9 +65,13 @@ iframe {
 }
 #popover_heading {
   float: left;
-  font-size: 28px;
+  font-size: 26px;
   width: 95%;
   color: darkcyan;
+}
+.award_heading {
+  color: darkslateblue;
+  font-size:16px;
 }
 
 /* Modal Content */
